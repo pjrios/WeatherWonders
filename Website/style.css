@@ -1,0 +1,192 @@
+/*body styling*/
+body{
+  background-color: #333333;
+  font-family: "Fira Code Light";
+}
+
+
+#video-background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /*object-fit: cover;*/
+  z-index: -1;
+}
+#video-background video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  object-fit:cover;
+  z-index: -1;
+}
+
+/* Style for the menu bar */
+#menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  background-color: rgba(51, 51, 51, 0);
+  color: #fff;
+  padding: 10px;
+
+}
+
+
+#menu-bar h1 {
+  margin-top: 0px;
+  margin-bottom: 0;
+
+}
+
+#menu-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#menu-bar li {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#menu-bar a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Styles for the form */
+
+.register-title {
+  color: #ffffff;
+}
+form {
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(92, 92, 92, 0.41);
+  border-radius: 20px;
+}
+
+form label {
+  display: block;
+  color: white;
+  margin-bottom: 10px;
+
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  color: white;
+  font-family: "Fira Code Light";
+  border: 2px solid rgba(255, 255, 255, 0);
+  background-color: rgba(40, 40, 40, 0);
+  outline: none;
+  box-shadow: inset 0 0 12px rgba(12, 12, 12, 0.51);
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+
+
+form input[type="submit"] {
+  background-color: rgba(92, 92, 92, 0.38);
+  color: #605858;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #555;
+}
+
+#coordinates {
+  margin-top: 20px;
+}
+/*style for the success page*/
+#success-message{
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+  #menu-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+  }
+
+  #menu-bar h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #menu-bar ul {
+    margin-top: 10px;
+  }
+
+  #menu-bar li {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  form {
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  form {
+    padding: 15px;
+  }
+}
+
+/* Media query for smaller devices */
+@media only screen and (max-width: 600px) {
+  /* Hide the menu items by default */
+  #menu-bar ul {
+    display: none;
+  }
+  
+  /* Show the menu items when the menu icon is clicked */
+  #menu-bar ul.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  /* Style for the menu icon */
+  #menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+  }
+}
